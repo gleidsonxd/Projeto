@@ -8,9 +8,10 @@
 <meta name="robots" content="default, follow" />
 <meta name="author" content="Construir Sites" />
 <link type="text/css" rel="stylesheet" href="styles/geral.css" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.slides.min.js"></script>
+<script src="js/jquery.tablesorter.pager.js"></script>
 
 
 <script>
@@ -29,19 +30,26 @@
 		});
 	});
 
+    /*plugin tabela*/
+     
+     $(document).ready(function() 
+    { 
+        $("thead").tablesorter(); 
+    } 
+	);
+   
+
   </script>
-
-
-
 
 <title>Projeto Linguagem de Marcação	</title>
 </head>
 <body>
+
 <div id="principal">
     <!-- topo -->
     <div id="topo">
 		<div id="topo_menu">
-			<!--<h1 class="logo"><a href="index.html" title="Projeto Linguagem de Marcação">Projeto Linguagem de Marcação</a></h1>-->
+			<h1 class="logo"><a href="index.html" title="Projeto Linguagem de Marcação">Projeto Linguagem de Marcação</a></h1>
 			
 			<ul class="menu">
 				<li><a href="index.html" title="Home" >Home</a></li>
@@ -49,17 +57,15 @@
 				<li><a href="tabela.html" title="Tabela" >Tabela</a></li>
 				<li class="left"><a href="contato.html" title="Contato" >Contato</a></li>
 			</ul>
-			
 		</div>
 	</div>
     <!-- /topo -->
 
-  
-
     <!-- conteudo -->
-    <div id="conteudo">
+	
 
-    	  <div id="col1">
+    <div id="conteudo">
+    <div id="col1">
 
       		<a href="noticias.html" title="Notícias"><img src="images/example-slide-1.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/"></a>
       		<img src="images/example-slide-2.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
@@ -72,34 +78,101 @@
 		
 		
 		<div id="col2">
+		<script>
+		function marcar(){
+			var cbox = document.querySelectorAll("input[type=checkbox]");
+			for(var int in cbox){
+				cbox[int].checked = true;
+			}
+		}
+
+		function desmarcar(){
+			var cbox = document.querySelectorAll("input[type=checkbox]");
+			for(var int in cbox){
+				cbox[int].checked = false;
+			}
+		}
+
+		function remover() {
 			
-			<div id="noticias" class="clearLeft">
-				<h3 class="tit_h3" id="">Notícias</h3>
-				<ul class="list_noticias">
-					<li><a href="noticias.html" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit,sedd."><span class="date">06/11/2012 </span> - Lorem ipsum dolor sit amet, consectetur adipisicing elit,sedd. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</a></li>
-					<li><a href="noticias.html" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit,sedd."><span class="date">06/11/2013 </span> - Lorem ipsum dolor sit amet, consectetur adipisicing elit,sedd. </a></li>
-					<li><a href="noticias.html" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit,sedd."><span class="date">06/11/2013 </span> - Lorem ipsum dolor sit amet, consectetur adipisicing elit,sedd. </a></li>
-					<li><a href="noticias.html" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit,sedd."><span class="date">06/11/2013 </span> - Lorem ipsum dolor sit amet, consectetur adipisicing elit,sedd. </a></li>
-					
-				</ul>
-			</div>
-			<div id="newsletter">
-				<h3 class="tit_h3">Newsletter</h3>
-				<p>Cadastre seu email e receba novidades.</p>
-				
-				<form action="#" method="post">
-					
-					<input type="text" name="nome" value="Nome" class="caixa" onfocus="if(this.value == 'Nome') this.value = '' " onblur="if(this.value == '') this.value = 'Nome'" />
-				
-					
-					<input type="email" name="email" value="Email" class="caixa" onfocus="if(this.value == 'Email') this.value = '' " onblur="if(this.value == '') this.value = 'Email'" />
-				
-					<input type="submit"  value="ok"  id="enviar" />
-					
-				</form>
-				
-			</div>
-			
+			var cbox = document.querySelectorAll("input[type=checkbox]:checked");
+			for(var int in cbox){
+			var linha = cbox[int].parentNode.parentNode;
+			var tabela = linha.parentNode;
+			tabela.removeChild(linha);
+		}
+	}
+	
+	</script>
+		
+			<h3 class="tit_h3">Tabela</h3>
+			<p>Exemplo de tabela ...</p>
+			<br class="clear" />
+			<table>
+				<thead>
+					<tr>
+						<td><input type="checkbox"  ></td>
+						<th>Item 1</th>
+						<th>Item 2</th>
+						<th>Item 3</th>
+						<th>Item 4</th>
+						<th>Item 5</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox"  ></td>
+						<td>Item 1</td>
+						<td>Item 2</td>
+						<td>Item 3</td>
+						<td>Item 4</td>
+						<td>Item 5</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"  ></td>
+						<td>Item 1</td>
+						<td>Item 2</td>
+						<td>Item 3</td>
+						<td>Item 4</td>
+						<td>Item 5</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"  ></td>
+						<td>Item 1</td>
+						<td>Item 2</td>
+						<td>Item 3</td>
+						<td>Item 4</td>
+						<td>Item 5</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"  ></td>
+						<td>Item 1</td>
+						<td>Item 2</td>
+						<td>Item 3</td>
+						<td>Item 4</td>
+						<td>Item 5</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"  ></td>
+						<td>Item 1</td>
+						<td>Item 2</td>
+						<td>Item 3</td>
+						<td>Item 4</td>
+						<td>Item 5</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"  ></td>
+						<td>Item 1</td>
+						<td>Item 2</td>
+						<td>Item 3</td>
+						<td>Item 4</td>
+						<td>Item 5</td>
+					</tr>
+				</tbody>
+			</table>
+		<input type="button" id="marca" value="Marca todos" onclick="marcar()">	
+		<input type="button" id="desmarca" value="Desmarca todos" onclick="desmarcar()">
+		<input type="button" id="apaga" value="Remover todos" onclick="remover()">
 		</div>
     </div >
 	

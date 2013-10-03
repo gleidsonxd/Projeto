@@ -1,0 +1,232 @@
+/* Koala apoia o movimento democrativo universidade para todos MDU */
+/* Estilos */
+
+* {list-style:none; margin:0; padding:0;}
+
+
+
+@font-face {
+    font-family: 'bauhaus_93regular';
+    src: url('bauhs93-webfont.eot');
+    src: url('bauhs93-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bauhs93-webfont.woff') format('woff'),
+         url('bauhs93-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+a {text-decoration:none}
+a:hover {text-decoration:underline}
+em {font-style:normal; font-weight:700;}
+p {line-height:1.3em;}
+
+fieldset {border:none}
+fieldset legend {text-indent:-9000px}
+
+/* Classes - Início */
+.clearLeft {clear:left}
+.clearRight {clear:right}
+.clear {clear:both}
+
+
+
+.link {background-color:#9d1d29; border:none; color:#fff; cursor:pointer; font-size:11px; padding:2px 3px}
+
+.left {margin:0!important;}
+
+
+/* Classes - Fim */
+
+body {background:#fff url(../images/bg_topo.jpg) no-repeat top center; color:#000; color:#5e5e5e; font:12px Bauhaus ,Arial,Verdana, Geneva,   sans-serif;  width:100%}
+
+#principal {margin:0 auto;}
+
+	/* Topo - Início */
+	#topo {float:left; height:63px; width:100%; background:#414291 url(../images/bg_topo.jpg) repeat-x;}
+	
+		.logo {text-indent:-9000px; position:absolute; top:0; left:352px; margin-top:63px;}
+		.logo, .logo a {float:left; height:153px; width:270px;}
+
+		/*
+		background:url(../images/logo.png) no-repeat top left;
+		*/
+
+		
+	
+	#topo_menu {width:960px; position:relative; margin:0 auto;}
+	
+	ul.menu {float:left; width:940px; font-size:16px; margin-top:24px; padding:0 10px;	 }
+	ul.menu li {float:left; display:inline; margin-right:37px;}
+	ul.menu li.margem_logo {margin-right:340px;}
+	ul.menu li a{color:#fff;}
+	ul.menu li a:hover , ul.menu li a:active{color:#fff600;}
+	
+	/*fim - topo*/	
+		
+
+
+	
+	/* Conteúdo - Início */
+	#conteudo {width:100%; background: url(../images/bg_.jpg) no-repeat top center;}
+		
+		#col1 , #col2 , #rodape_interno{width:940px;   padding:0 10px; margin:0 auto;}
+			
+			/* Coluna 1 - Início */
+			#col1 {padding-top: 6px; margin-bottom:45px;height:450px;}
+			
+				#col1 .h2_main {font-size:39px; color:#fff; width:340px; margin-top:130px; float:left;}
+				
+			/* Coluna 1 - Fim */
+			
+			/* Coluna 2 - Início */
+			#col2 {height:100%;}
+			#col2 .tit_h3 {color:#414291; font-size:24px; margin-bottom: 25px;}
+			#col2 p, #col2 li {font-size:14px; font-family:Arial; color:#414291; line-height:160%;}
+				
+				/* Noticias */
+				#noticias {float:left; width:720px;}
+				.list_noticias {float:left; width:700px; margin-right:20px;}
+				.list_noticias  li{float:left; width:100%; border-bottom:1px solid #ccc; padding-bottom:12px; margin-bottom:13px; }
+				.list_noticias .date {font-weight:bold;}
+				
+				/* Newsletter */
+				#newsletter  {float:left; width:220px;}
+				#newsletter form {margin-top:20px; float:left; width:220px;}
+				.caixa , #enviar , textarea{border-radius:5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 0 none; font-size:14px; padding:10px;}
+				.caixa , textarea{width:200px;  color:#414291; margin-bottom:10px;  background-color:#ccc;  }
+				#enviar {background-color:#414291; color:#fff; float:right; width:auto; cursor:pointer;}
+				
+				
+				/* Contato */
+				
+				#contato {float:left; width:520px; margin-right:20px; }
+				#contato form {float:left; width:100%;}
+				#email{float:left; width:500px; margin-right:20px; }
+				#contato form input[type="text"] , #contato form textarea{width:500px;}
+				
+				/* Localização */
+				
+				
+				#localizacao { float:left; width:400px; height: 400px; padding-top: 50px;}
+				
+				
+				
+				/* Notícias Interna */
+				#noticias_interna h2 {margin-bottom:20px;}
+				#noticias_interna img {width:500px; float:left; height:333px; margin:0 10px  10px 0;}
+				
+				/* Tabela */
+				
+				table {
+					border-collapse: collapse;
+					
+					width:600px;
+				}
+				
+				th {
+					text-transform: uppercase;
+					background-color: #ccc;
+					border-bottom: 2px solid #000;
+					padding: 0px 10px;
+				}
+				
+				td {font-size:14px;}	
+				
+				tr:nth-child(odd) {
+					background-color: #eee;
+				}
+				td:nth-child(n+4) {
+					text-align: right;
+				}
+				td:nth-last-child(n+4) {
+					text-align: center;
+				}
+				tr:hover {
+					background-color: #999;
+				}
+				#marca,#desmarca,#apaga{
+					background-color:#414291; color:#fff; float:left;
+					 width:auto; border-radius:5px; -moz-border-radius: 5px; -webkit-border-radius: 3px; border: 0 none; font-size:14px; padding:3px; margin: 2px;
+				}
+				
+			/* Coluna 2 - Fim */
+			
+		
+	/* Conteúdo - Fim */
+	
+	/* Rodapé - Início */
+	#rodape {width:100%; float:left;height:161px; margin-top:100px; background:#414291 url(../images/bg_topo.jpg) repeat-x left top;}
+		#rodape_interno  ul{margin-left:150px;}
+		#rodape address {font-size:14px; font-family:Arial; color:#fff; float:left; margin-top:70px; }
+		
+	/* Rodapé - Fim */
+
+/*  --- Lista de Error ----
+.errors {float:right; width:496px;}
+.errors li {color:#F00; display:inline; float:left;} */
+   
+    #col1 {
+      display: none
+    }
+
+    #col1 .slidesjs-navigation {
+      margin-top:3px;
+
+    }
+
+    #col1 .slidesjs-previous {
+      margin-right: 5px;
+      float: left;
+     
+    }
+
+    #col1 .slidesjs-next {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(../images/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #col1 a:link,
+    #col1 a:visited {
+      color: #333
+    }
+
+    #col1 a:hover,
+    #col1 a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
